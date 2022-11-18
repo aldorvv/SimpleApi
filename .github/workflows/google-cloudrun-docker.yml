@@ -7,7 +7,7 @@ on:
 
 env:
   PROJECT_ID: jovial-engine-368523
-  GAR_LOCATION: gcr.io
+  GAR_LOCATION: us-west4
   SERVICE: pokeservice
   REGION: us-west4
 
