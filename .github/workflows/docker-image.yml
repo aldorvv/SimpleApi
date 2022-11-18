@@ -19,4 +19,4 @@ jobs:
     - name: actions-pytest
       uses: xoviat/actions-pytest@0.1-alpha2
       with:
-        args: "-vvv"
+        args: "tests -vvv"
