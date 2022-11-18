@@ -5,8 +5,7 @@ import statistics
 
 class Stats:
 
-    def __init__(self, names: List[str], values: List[int]) -> None:
-        self._names = names
+    def __init__(self, values: List[int]) -> None:
         self._values = values
 
     def __getitem__(self, index: int) -> int:
@@ -14,10 +13,6 @@ class Stats:
 
     def __len__(self) -> int:
         return len(self._values)
-
-    @property
-    def names(self) -> List[str]:
-        return self._names
 
     def mean(self) -> float:
         return statistics.mean(self)
@@ -36,7 +31,6 @@ class Stats:
 
     def all(self) -> Dict[str, Union[int, float]]:
         return {
-            "berries_names": self.names,
             "mean_growth_time": self.mean(),
             "min_growth_time": self.min(),
             "max_growth_time": self.max(),
