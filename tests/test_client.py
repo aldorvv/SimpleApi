@@ -9,13 +9,7 @@ def test_singleton():
 
 
 def test_berries(client: PokeClient):
-    expected_berries = [
-        "cheri",
-        "chesto",
-        "pecha",
-        "rawst",
-        "aspear"
-    ]
+    expected_berries = ["cheri", "chesto", "pecha", "rawst", "aspear"]
     client.limit = len(expected_berries)
     assert client.berries == expected_berries
 

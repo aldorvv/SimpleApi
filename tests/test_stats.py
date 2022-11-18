@@ -7,7 +7,7 @@ def test_all_stats(stats: Stats):
         "mean_growth_time": 4.7,
         "median_growth_time": 3.5,
         "min_growth_time": 3,
-        "variance_growth_time": 8.9
+        "variance_growth_time": 8.9,
     }
     assert stats.all() == expected_result
 

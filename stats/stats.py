@@ -4,7 +4,6 @@ import statistics
 
 
 class Stats:
-
     def __init__(self, values: List[int]) -> None:
         self._values = values
 
@@ -35,5 +34,5 @@ class Stats:
             "min_growth_time": self.min(),
             "max_growth_time": self.max(),
             "median_growth_time": self.median(),
-            "variance_growth_time": self.variance()
+            "variance_growth_time": self.variance(),
         }

@@ -14,7 +14,6 @@ if URL is None:
 
 
 class PokeClient(metaclass=Singleton):
-
     def __init__(self):
         self._base_url: str = URL.rstrip("/")
         self._cache = {}
@@ -34,15 +33,12 @@ class PokeClient(metaclass=Singleton):
 
     @property
     def berries(self) -> List[str]:
-        if (berries := self._cache.get("berries")) \
-            and len(berries) == self.limit:
+        if (berries := self._cache.get("berries")) and len(berries) == self.limit:
             return berries
 
         params = {"limit": self.limit}
         body = requests.get(f"{self.base_url}/berry", params=params).json()
-        self._cache["berries"] = [
-            berry.get("name") for berry in body["results"]
-        ]
+        self._cache["berries"] = [berry.get("name") for berry in body["results"]]
         return self._cache["berries"]
 
     @property

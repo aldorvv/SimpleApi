@@ -1,0 +1,6 @@
+[flake8]
+exclude =
+    __pycache__
+    .venv
+    Dockerfile
+max-line-length = 79
